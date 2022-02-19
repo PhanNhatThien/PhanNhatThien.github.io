@@ -4,13 +4,12 @@
         <meta charset="UTF-8">
         <title>Gác Sách</title>
         <link rel="shortcut icon" type="image/png" href="image/logo.jpg"/>
-
         <!-- <script src="script.js"></script> -->
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
        
@@ -18,9 +17,13 @@
         <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/01e2bbe2dc.js"></script>
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
-        <link rel="stylesheet" type = "text/css" href="style.css" />   
+        <link rel="stylesheet" type = "text/css" href="style.css" /> 
+        <script src="script.js"></script> 
     </head>
     <body>
+        <!-- <div>
+            <a id="gototop" href="javascript:;">GO TO TOP</a>
+        </div> -->
         <header>
             <div class="logo">
                 <img src="image/logo.jpg" atl="logo"/>
@@ -29,7 +32,7 @@
                 <div>
                     <div class="search">
                         <input type="text" placeholder="Nhập tên sách, tuyển tập, tác giả..."/>
-                        <input type="button" value="Tìm kiếm"/>
+                        <input type="button" value="Tìm"/>
                     </div>
                 </div>
                 <div class="nav" >
@@ -43,10 +46,10 @@
                                 <li><a href="#">Sách kỹ năng</a></li>
                             </ul>
                         </li>
-                        <li><a href ="#">Sách mới nhất</a></li>
-                        <li><a href ="#">Sách giảm giá</a></li>
-                        <li><a href ="#">Sách mua nhiều</a></li>
-                        <li><a href ="#">Khuyên đọc</a></li>
+                        <li><a href ="#book-new">Sách mới nhất</a></li>
+                        <li><a href ="#book-sale">Sách giảm giá</a></li>
+                        <li><a href ="#book-buys">Sách mua nhiều</a></li>
+                        <li><a href ="#recommend">Khuyên đọc</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,49 +59,20 @@
                     <li class="avatar"><a href ="#">Tài khoản</a></li>
                 </ul>
                 <ul class="user-info">
-                    <li></i>Đăng nhập</li>
-                    <li>Tạo tài khoản</li>
-                    <li><i class="fa fa-facebook"></i>  | Đăng nhập bằng facebook</li>
-                    <li><i class="fa fa-google"></i> | Đăng nhập bằng google</li>
+                    <li><a href="login.html">Đăng nhập</a></li>
+                    <li><a href="register.html">Đăng ký</a></li>
+
+                    <li> <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i>  | Đăng nhập bằng facebook</li></a> 
+                    <li> <a href="https://accounts.google.com/"> <i class="fa fa-google"></i> | Đăng nhập bằng google</li></a>
                 </ul>
             </div>
         </header>
-        <script>
-            $(document).ready(function(){
-                //js header
-                $(window).scroll(function() {
-                    if($(this).scrollTop()){
-                        $('header').addClass('sticky');
-                    }else{
-                        $('header').removeClass('sticky');
-                    }
-                })
-
-                //js gototop
-                $("#gototop").hide();
-                $(window).scroll(function(){
-                    if($(this).scrollTop() >= 500){
-                        $("#gototop").show("slow");
-                    }else{
-                        $("#gototop").hide("slow");
-                    }
-                })
-
-                $("#gototop").click(function() {
-                    $("html, body").animate({
-                        scrollTop: 0
-                    },1000);
-                })
-                
-            }) 
-        </script>
-
         <section class="sidebar">
             <ul>
-                <li><a href="#">
+                <li><a href="trangchu.html">
                     <i class="fa fa-home" ></i>
                 </a></li>
-                <li><a href="#">
+                <li><a href="cart.html">
                     <i class="fa fa-shopping-cart"></i>
                 </a></li>
                 <li><a href="#">
@@ -107,7 +81,6 @@
                 <li><a id="gototop" href="javascript:;">
                     <i class="fa fa-arrow-up"></i>
                 </a></li>
-                
             </ul>
         </section>
         
@@ -175,7 +148,7 @@
                                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
                                             <h7>54.400đ</h7>
                                             <div>
-                                                <input type="button" value="Đọc thử"/>
+                                                <a href="detail.html"><input type="button" value="Đọc thử"/></a>
                                             </div>
                                         </div>
                                     </div>
@@ -191,27 +164,57 @@
                                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
                                             <h7>54.400đ</h7>
                                             <div>
-                                                <input type="button" value="Đọc thử"/>
+                                                <a href="detail.html"><input type="button" value="Đọc thử"/></a>
                                             </div>
                                         </div>
-                                    </div>
+                                     </div>
                                 </div>
                                 <div class="book_banner">
                                     <span>Đọc thử  <i class="fa fa-level-down" aria-hidden="true"></i></span>
-                                    <div >
-                                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book_banner"></a></div>
-                                    </div>
+                                    <div id="book_banner">
+                                        <div >
+                                            <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book_banner"></a></div>
+                                        </div>
+                                        <div class="detail">
+                                            <h5><a href="https://book365.vn/sach/515470_me-xau.html">Mẹ xấu</a></h3>
+                                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                                            <h7>54.400đ</h7>
+                                            <div>
+                                                <a href="detail.html"><input type="button" value="Đọc thử"/></a>
+                                            </div>
+                                        </div>
+                                     </div>
                                 </div>
                                 <div class="book_banner">
                                     <span>Đọc thử  <i class="fa fa-level-down" aria-hidden="true"></i></span>
-                                    <div >
-                                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book_banner"></a></div>
-                                    </div>
+                                    <div id="book_banner">
+                                        <div >
+                                            <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book_banner"></a></div>
+                                        </div>
+                                        <div class="detail">
+                                            <h5><a href="https://book365.vn/sach/515470_me-xau.html">Mẹ xấu</a></h3>
+                                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                                            <h7>54.400đ</h7>
+                                            <div>
+                                                <a href="detail.html"><input type="button" value="Đọc thử"/></a>
+                                            </div>
+                                        </div>
+                                     </div>
                                 </div>
                                 <div class="book_banner">
                                     <span>Đọc thử  <i class="fa fa-level-down" aria-hidden="true"></i></span>
-                                    <div >
-                                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book_banner"></a></div>
+                                    <div id="book_banner">
+                                        <div >
+                                            <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book_banner"></a></div>
+                                        </div>
+                                        <div class="detail">
+                                            <h5><a href="https://book365.vn/sach/515470_me-xau.html">Mẹ xấu</a></h3>
+                                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                                            <h7>54.400đ</h7>
+                                            <div>
+                                                <a href="detail.html"><input type="button" value="Đọc thử"/></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -335,8 +338,8 @@
               </div>
         </section>
         <section class="container">
-            <h2 class="subject"><span><i class="fa fa-book"></i> Sách Giảm Giá</span></h2>
-            <div class="books">
+            <h2 class="subject" id="book-sale"><span><i class="fa fa-book"></i> Sách Giảm Giá</span></h2>
+            <div class="books" >
                 <div class="book">
                     <div id="book" >
                         <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
@@ -352,7 +355,9 @@
                     <div class="detail-buy">
                         <div class="bt-buy">
                             <div>
-                                <input type="button" value="Xem ngay"/>
+                                <a href="detail.html">
+                                    <input type="button" value="Xem ngay"/>
+                                </a>
                             </div>
                             <div>
                                 <input type="button" value="Thêm vào giỏ"/>
@@ -448,6 +453,71 @@
                             </div>
                             <div>
                                 <input type="button" value="Thêm vào giỏ"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
                             </div>
                         </div>
                     </div>
@@ -456,11 +526,11 @@
                     <input type="button" value="Xem Thêm >>"/>
                 </div>
             </div>
-            <h2 class="subject"><span><i class="fa fa-book"></i> Sách mới nhất</span></h2>
-            <div class="books">
+            <h2 class="subject" id="book-new"><span><i class="fa fa-book"></i> Sách mới nhất</span></h2>
+            <div class="books" >
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -473,7 +543,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -486,7 +556,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -499,7 +569,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -512,7 +582,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -525,7 +595,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -538,7 +608,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -551,7 +621,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -564,7 +634,7 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -577,7 +647,279 @@
                 </div>
                 <div class="book">
                     <div >
-                        <div><a href="#"><img src="image/book_3.jpeg" alt="book" class="img-book"></a></div>
+                        <div><a href="#"><img src="image/book_4.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more">
+                    <input type="button" value="Xem Thêm >>"/>
+                </div>
+            </div>
+            <h2 class="subject" id="book-buys"><span><i class="fa fa-book"></i> Mua nhiều</span></h2>
+            <div class="books" >
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                    <div >
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_5.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more">
+                    <input type="button" value="Xem Thêm >>"/>
+                </div>
+            </div>
+            <h2 class="subject" id="recommend"><span><i class="fa fa-book"></i> Khuyên đọc</span></h2>
+            <div class="books" >
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
+                        <div class="info">
+                            <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
+                            <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
+                            <h7 class="price-book">54.400đ</h4>
+                            <div>
+                                <img src="image/star.png" alt="star" class="img-star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div >
+                        <div><a href="#"><img src="image/book_6.jpg" alt="book" class="img-book"></a></div>
                         <div class="info">
                             <h5 class="title-book"><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book">Mẹ xấu</a></h3>
                             <!-- <h7 class="author-book"> Sung-Kyung Park/ Văn Ngọc Minh Quyên</h4>    -->
@@ -613,11 +955,11 @@
                 <hr>
             </div>
             <div>
-                <p>KOMO là một sản phẩm của công ty Cổ Phần Văn Hóa Phương Nam (PNC), ra đời vào ngày 26/03/2014,
-                     với hình thức kinh doanh ebook có bản quyền. Ebook của KOMO có giá rẻ hơn nhiều so với sách giấy, 
-                     thông thường giá chỉ bằng 40% hoặc thậm chí 10% sách giấy. Ngoài tính năng Mua thông thường, KOMO 
-                     còn có nhiều tính năng thú vị như THUÊ – TẶNG – MƯỢN/ CHO MƯỢN ebook giữa các thành viên trong cộng đồng KOMO.
-                      Để đọc được ebook của KOMO, độc giả phải tải ứng dụng đọc sách KOMO reader. Đây là một trong những ứng dụng đọc sách tốt nhất hiện nay.</p>
+                <p>Gác Sách là một sản phẩm của công ty Cổ Phần Văn Hóa Phương Nam , ra đời vào ngày 1/1/2000,
+                     với hình thức kinh doanh ebook có bản quyền. Ebook của Gác Sách có giá rẻ hơn nhiều so với sách giấy, 
+                     thông thường giá chỉ bằng 40% hoặc thậm chí 10% sách giấy. Ngoài tính năng Mua thông thường, Gác Sách
+                     còn có nhiều tính năng thú vị như THUÊ – TẶNG – MƯỢN/ CHO MƯỢN ebook giữa các thành viên trong cộng đồng Gác Sách.
+                      Để đọc được ebook của Gác Sách, độc giả phải tải ứng dụng đọc sách "Gác Sách reader". Đây là một trong những ứng dụng đọc sách tốt nhất hiện nay.</p>
             </div>
             <div class="introduce">
                 <div class="video">
@@ -626,7 +968,7 @@
                 </div>
                 <div>
                     <ul class="app-content">
-                        <li>Tải KOMO hoàn toàn miễn phí tại đây</li>
+                        <li>Tải Gác Sách hoàn toàn miễn phí tại đây</li>
                         <li>Có thể đồng bộ cho 07 thiết bị khác nhau</li>
                         <li>Sử dụng định dạng EPUB và tương thích với nhiều thiết bị hệ điều hành phổ biến</li>
                         <li>Tự động lưu và đồng bộ trang đang đọc, dấu trang, những đoạn bôi đen, ghi chú</li>
@@ -734,8 +1076,7 @@
 
                 </div>
             </section>
-        </footer>
-        
+        </footer>  
     </body>
 
 
