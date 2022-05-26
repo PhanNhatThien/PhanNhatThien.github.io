@@ -586,12 +586,7 @@ div.book_detail{
     width: 100%;
     
 }
-ul.info-detail{
-    list-style-type:none;
-}
-ul.info-detail li:last-child div{
-    display:flex;
-}
+
 div.book_detail > #book{
     display: flex;
     text-align: initial;
@@ -600,62 +595,11 @@ div.book_detail .info{
     background: white;
 
 }
-div.buy-detail{
-    margin-right: 5%;
-}
-div.buy-detail input{
-    background-color:#f7682d;
-    border-color: #f7682d;
-}
-div.add-cart-detail input{
-    border-color:#1dab8a;
-     background-color: #1dab8a;
-}
-ul.info-detail2{
-    list-style-type: none;
-}
-div.info ul{
-    list-style-type: none;
-}
-div.info-detail3 ul{
-    list-style-type: none;
-}
-div.info-detail3 ul:last-child{
-    display:flex; 
-    list-style-type:none;
-     justify-content: space-around;
-}
 
-section.details{
-    display:flex;
-}
-div.detail-left{
-    width:70%;
-}
-div.detail-left div:first-child{
-    background: white;
-    padding:1%; 
-    margin-bottom: 2%;
-}
-div.detail-left div:first-child p b{
-    color:#f7682d;
-}
-div.detail-left div:first-child div ul {
-    list-style-type: none;
-    padding:0;
-    margin:0;
-}
+
 div.choose_stars{
     padding:1%;
     background:white;
-}
-div.choose_stars div img{
-    width:10%;
-}
-div.choose_stars div input{
-    width:10% ;
-    height:10px; 
-    margin:1%
 }
 
 div.comments{
@@ -675,47 +619,9 @@ div.comments > textarea{
     margin-top: 7%;
     margin-bottom: 3%;
 }
-
-
-.cart-subject {
-    background: white; 
-    padding:1%;
-    text-align: center;
-}
-div.cart{
-    display: flex; 
-    background: white;
-    padding: 1%;
-}
-
-div.cart div:first-child{
-    width:10%;
-}
-div.cart div:nth-child(2) > h5 a{
-    color: #354e75;
-}
-
-div.cart div:nth-child(2){
-    width:20%;
-}
-div.cart div:nth-child(3){
-    width:30%;
-}
-div.cart div:nth-child(4){
-    width:20%;
-}
-div.cart div:nth-child(5){
-    width:20%;
-}
-.count{
-    width: 5%; 
-    margin: 0;
-     border: none;
-}
-
-.cart-subject h4{
-    color:#f7682d;
-}
+/* div.book_cart{
+    width: 25%;
+} */
 
 div.book_cart > #book{
     display: flex;
@@ -724,39 +630,6 @@ div.book_cart .info{
     background: white;
     display: flex;
 }
-div.code-sales{
-    display:flex;
-    background: white;
-}
-div.code-sale{
-    border: 1px solid lightgray; 
-    width: 25%;padding:1%;
-}
-div.code-sale div{
-    display:flex;
-}
-div.code-sale div h8{
-    padding-right:1%;
-}
-div.code-sale div input{
-    width:40%;
-    height: 20px;
-}
-div.code-sale h6 b{
-    color:black
-}
-div.sum-money{
-    margin-left: auto;
-    padding: 1%;
-}
-div.sum-money input{
-    background-color:#f7682d;
-    border-color: #f7682d;
-}
-
-
-
-
 /* Responsive*/
 /* máy tính bản*/
 @media screen and (max-width : 900px) {

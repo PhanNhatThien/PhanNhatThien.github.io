@@ -56,11 +56,10 @@ h
                     <li class="avatar"><a href ="#">Tài khoản</a></li>
                 </ul>
                 <ul class="user-info">
-                    <li><a href="login.html">Đăng nhập</a></li>
-                    <li><a href="register.html">Đăng ký</a></li>
-
-                    <li> <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i>  | Đăng nhập bằng facebook</li></a> 
-                    <li> <a href="https://accounts.google.com/"> <i class="fa fa-google"></i> | Đăng nhập bằng google</li></a>
+                    <li></i>Đăng nhập</li>
+                    <li>Tạo tài khoản</li>
+                    <li><i class="fa fa-facebook"></i>  | Đăng nhập bằng facebook</li>
+                    <li><i class="fa fa-google"></i> | Đăng nhập bằng google</li>
                 </ul>
             </div>
         </header>
@@ -87,7 +86,7 @@ h
                     <div id="book" >
                         <div><a href="#"><img src="image/book_3.jpeg" alt="book" ></a></div>
                         <div class="info">
-                            <ul class="info-detail">
+                            <ul style="list-style-type:none;">
                                 <li ><a href="https://book365.vn/sach/515470_me-xau.html" class="link-book"><b>Mẹ xấu</b></a></li>
                                 <li>Sung-Kyung Park/ Văn Ngọc Minh Quyên <i>(Tác giả)</i></li>
                                 <li>Văn Ngọc Minh Quyên <i>(Dịch giả)</i></li>
@@ -97,18 +96,18 @@ h
                                 <li>Tình trạng: hết hàng</li>
                                 <li><br></li>
                                 <li>
-                                    <div>
-                                        <div class="buy-detail">
-                                            <input type="button" value="Mua ngay"/>
+                                    <div style="display:flex;">
+                                        <div style="margin-right: 5%;">
+                                            <input style="background-color:#f7682d;border-color: #f7682d;" type="button" value="Mua ngay"/>
                                         </div>
-                                        <div class="add-cart-detail">
-                                            <input type="button" value="Thêm vào giỏ"/>
+                                        <div>
+                                            <input style="border-color:#1dab8a; background-color: #1dab8a;" type="button" value="Thêm vào giỏ"/>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                             <br>
-                            <ul class="info-detail2" >
+                            <ul style="list-style-type:none">
                                 <li><i class="fa fa-bullhorn"></i><b>  Thông báo với tôi khi có hàng</b></li>
                                 <li>Thông tin & Khuyến mãi</li>
                                 <li>Đổi trả hàng trong vòng 10 ngày</li>
@@ -117,14 +116,14 @@ h
                                 <li><img src="image/star.png" alt="star" class="img-star"></li>
                             </ul>
                         </div>
-                        <div class="info-detail3">
-                            <ul>
+                        <div>
+                            <ul style="list-style-type:none">
                                 <li><i class="fa fa-heart"></i>  Thêm vào yêu thích</li>
                                 <li><i class="fa fa-user"></i>  Ưu đãi khách hàng thân thiết</li>
                                 <li><i class="fa fa-car"></i>  Để được miễn phí vận chuyển</li>
                             </ul>
                             <ul>Share để nhận xu - Mua hàng 0đ</ul>
-                            <ul>
+                            <ul style="display:flex; list-style-type:none; justify-content: space-around;">
                                 <li><i class="fa fa-thumbs-up"></i>Thích</li>
                                 <li><i class="fa fa-twitter"></i>Tweet</li>
                                 <li><i class="fa fa-pinterest"></i>Lưu</li>
@@ -135,48 +134,46 @@ h
             </div>
             
         </section>
-        <section class="container details" >
-            <div class="detail-left">
-                <div >
-                    <p><b>Thông tin chi tiết</b></p>
+        <section class="container" style="display:flex">
+            <div class="detail-left" style="width: 70%;">
+                <div style="background: white;padding:1%; margin-bottom: 2%;">
+                    <p><b style="color:#f7682d">Thông tin chi tiết</b></p>
                     <div>
-                        <ul>
-                            <li>Nhà xuất bản: NXB thế giới</li>
-                            <li>Ngày xuất bản: 1/1/2022</li>
-                            <li>Kích thước: 15 x 23 x 0.5</li>
-                            <li>Số trang: 182 trang</li>
-                            <li>Trọng lượng: 500g</li>
-                        </ul>
+                        <ul><li>Nhà xuất bản: NXB thế giới</li></ul>
+                        <ul><li>Ngày xuất bản: 1/1/2022</li></ul>
+                        <ul><li>Kích thước: 15 x 23 x 0.5</li></ul>
+                        <ul><li>Số trang: 182 trang</li></ul>
+                        <ul><li>Trọng lượng: 500g</li></ul>
                     </div>
                 </div>
                 <div class="choose_stars">
                     <h6 style="color:#f7682d"><b>Nhận xét của khách hàng</b></h6>
                     <div>
-                        <img  src="image/star.png" alt="star" class="img-star">
+                        <img style="width:10%" src="image/star.png" alt="star" class="img-star">
                     </div>
                     <div style="display:flex">
                         <h5>1 sao</h5>
-                        <input type="text"/>
+                        <input style="width:10% ;height:10px; margin:1%" type="text"/>
                     </div>
                     <div style="display:flex">
                         <h5>2 sao</h5>
-                        <input  type="text"/>
+                        <input style="width:10% ;height:10px; margin:1%" type="text"/>
                     </div>
                     <div style="display:flex">
                         <h5>3 sao</h5>
-                        <input  type="text"/>
+                        <input style="width:10% ;height:10px; margin:1%" type="text"/>
                     </div>
                     <div style="display:flex">
                         <h5>4 sao</h5>
-                        <input type="text"/>
+                        <input style="width:10% ;height:10px; margin:1%" type="text"/>
                     </div>
                     <div style="display:flex">
                         <h5>5 sao</h5>
-                        <input  type="text"/>
+                        <input style="width:10% ;height:10px; margin:1%" type="text"/>
                     </div>
                     <h7>Chưa có nhận xét</h7>
                     <div style="text-align: center;">
-                        <input style="width:auto; height:100%;background-color:#f7682d; border-color: #f7682d;" type="submit" value="Viết nhận xét của bạn" />
+                        <input style="background-color:#f7682d; border-color: #f7682d;" type="submit" value="Viết nhận xét của bạn" />
                     </div>
                 </div>
                 <div class="comments">
